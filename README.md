@@ -154,37 +154,6 @@ The LUMIERE file additionally has `First_PD_MRI_Overall_Position` and `First_PD_
 
 ---
 
-## Reproducing the figures
-
-```bash
-git clone https://github.com/zawad59/Modeling-Latent-Tumor-Progression-Directions-in-Glioblastoma-Cohort.git
-cd Modeling-Latent-Tumor-Progression-Directions-in-Glioblastoma-Cohort
-
-pip install numpy pandas matplotlib
-pip install pyarrow            # only needed to read the .parquet files yourself
-```
-
-Run each script from the folder that holds its input CSVs:
-
-```bash
-# Top features per progression vector  -> feature_rank_progression_vectors.{png,pdf}
-python feature_ranks.py
-
-# λ* / outcome-stability robustness     -> pipeline_robustness_bc.{png,pdf}
-python gen_lamba_median.py             # optional args: <LUMIERE audit csv> <MU-Glioma audit csv>
-
-# Detection-timing and stable-outcome bars -> Overleaf_DIagram/*.{png,pdf}
-cd Overleaf_DIagram
-python progressor_bar.py
-python stable_diagram.py
-```
-
-`gen_lamba_median.py` also prints the stability numbers quoted above, including `σST` CV, the median SD of `λ*`, and the patients with identical categories across shuffles. Running the scripts regenerates the committed figures in place.
-
-Docstrings inside two scripts mention older file names (`feature_rank_figure.py`, `robustness_figure_bc.py`); use the file names above.
-
----
-
 ## Limitations
 
 - Only 7 (LUMIERE) and 5 (MU-Glioma) stable patients, so specificity estimates are coarse and seed-to-seed variable.
