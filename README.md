@@ -6,8 +6,6 @@ Radiomic drift detection for glioblastoma (GBM). Instead of classifying each fol
 
 This repository holds the released results of the paper (per-seed audits, feature-rank statistics, drift trajectories, PCA/direction weights) and the scripts that turn them into the paper's figures.
 
-> **Note on scope.** The pipeline notebooks (feature extraction, LOPO training, λ selection) are **not** in this repository. Everything here is a *result* of that pipeline, plus the figure scripts. The method is described below and in full in the paper (Algorithms 1 and 2).
-
 ---
 
 ## Highlights
