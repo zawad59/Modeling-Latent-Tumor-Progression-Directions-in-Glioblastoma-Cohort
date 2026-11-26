@@ -91,7 +91,7 @@ Each follow-up scan is queried against the patient's most recent Post-Op scan, a
 
 ### Which features drive the directions
 
-![Top features per progression vector](feature_rank_progression_vectors.png)
+![Top features per progression vector](feature_rank_progression_vectors (1).png)
 
 - **LUMIERE, PV1**: necrosis zone and dependence structure, e.g. `glszm ZonePercentage` and `gldm SmallDependenceEmphasis` (mainly T1 and FLAIR).
 - **LUMIERE, PV2**: contrast-enhancing, high-gray-level intensity features (`glcm JointAverage` / `SumAverage`, `glszm HighGrayLevelZoneEmphasis`, `glrlm HighGrayLevelRunEmphasis`), drawn almost entirely from T2.
